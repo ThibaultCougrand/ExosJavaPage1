@@ -26,14 +26,14 @@ public class Exercice4 {
         adresses[9] = "thor@hotmail.fr";
         for (int i = 0; i < adresses.length; i++) {
         	//System.out.println(adresses[i].substring(adresses[i].indexOf("@")));;
-        	switch (adresses[i].substring(adresses[i].indexOf("@"))) {
-	        	case "@gmail.com": comptGmail++;
+        	switch (adresses[i].substring(adresses[i].indexOf("@"), adresses[i].lastIndexOf("."))) {
+	        	case "@gmail": comptGmail++;
 	        	break;
-	        	case "@orange.fr": comptOrange++;
+	        	case "@orange": comptOrange++;
 	        	break;
-	        	case "@hotmail.fr": comptHotmail++;
+	        	case "@hotmail": comptHotmail++;
 	        	break;
-	        	case "@sfr.fr": comptSfr++;
+	        	case "@sfr": comptSfr++;
 	        	break;
         	}
         }

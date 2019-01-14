@@ -8,6 +8,11 @@ package exercices1;
  */
 
 public class Exercice3 {
+	
+	/**
+	 * fonction qui permet d'afficher un tableau en 2D
+	 * @param tableau2D
+	 */
 	public static void affiche(int[][] tableau2D) {
 		for (int i = 0; i < tableau2D.length; i++) {
 			for (int j = 0; j < tableau2D[i].length; j++) {

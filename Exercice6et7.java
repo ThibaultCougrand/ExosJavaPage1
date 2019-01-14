@@ -1,5 +1,7 @@
 package exercices1;
 
+import java.time.Duration;
+import java.time.LocalTime;
 import java.util.Scanner;
 
 /**
@@ -18,15 +20,13 @@ public class Exercice6et7 {
 		Scanner sc = new Scanner(System.in);
 		int nb = (int) (Math.random() * 1001);
 		int count = 0;
-
+		LocalTime lancement = LocalTime.now();
+		Duration chrono;
+		System.out.println("Veuillez saisir un nombre entre 0 et 1000");
 		boolean verif = true;
 		while (verif) {
-			
-			System.out.println("Veuillez saisir un nombre entre 0 et 1000");
-			System.out.println(nb);
-
+//			System.out.println(nb);
 			int saisi = sc.nextInt();
-			
 			if (saisi >= 0 && saisi <= 1000) {
 				if (saisi > nb) {
 					System.out.println("C'est moins !");
@@ -44,7 +44,12 @@ public class Exercice6et7 {
 			}
 			count++;
 		}
-		System.out.println("Vous avez trouvé en "+count+" essais!");
+		LocalTime fin = LocalTime.now();
+		chrono = Duration.between(lancement, fin);
+		long minutes = chrono.toMinutes();
+		long secondes = chrono.getSeconds() - minutes*60;
+		String timer = minutes + " minutes et " + secondes + " secondes";
+		System.out.println("Vous avez trouvé en "+count+" essais! et en " + timer);
 		sc.close();
 	}
 }

@@ -11,7 +11,7 @@ public class Exercice2 {
 
 	public static void main(String[] args) {
 		String nom = "cougrand";
-		String prenom = "thibault";
+		String prenom = "THIBAULT";
 		System.out.println(nom.toUpperCase() + "\n" + prenom.substring(0,1).toUpperCase()+prenom.substring(1).toLowerCase());
 
 	}
