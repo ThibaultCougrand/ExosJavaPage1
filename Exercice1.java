@@ -1,6 +1,5 @@
 package exercices1;
 
-import com.sun.org.apache.xerces.internal.impl.xpath.regex.ParseException;
 
 /**
  * Écrire un programme qui récupère deux entiers sur la "ligne de commande" et qui en

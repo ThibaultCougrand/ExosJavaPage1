@@ -21,7 +21,6 @@ public class Exercice6et7 {
 		int nb = (int) (Math.random() * 1001);
 		int count = 0;
 		LocalTime lancement = LocalTime.now();
-		Duration chrono;
 		System.out.println("Veuillez saisir un nombre entre 0 et 1000");
 		boolean verif = true;
 		while (verif) {
@@ -45,7 +44,7 @@ public class Exercice6et7 {
 			count++;
 		}
 		LocalTime fin = LocalTime.now();
-		chrono = Duration.between(lancement, fin);
+		Duration chrono = Duration.between(lancement, fin);
 		long minutes = chrono.toMinutes();
 		long secondes = chrono.getSeconds() - minutes*60;
 		String timer = minutes + " minutes et " + secondes + " secondes";
